@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포지셔닝(positioning)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        height: 5000px;
+      }
+      .box {
+        position: sticky;
+        top: 50px;
+        left: 0;
+        border: 1px solid black;
+        padding: 50px;
+        width: 100%;
+        height: 200px;
+      }
+      #box1 {
+        background: rgb(85, 85, 190);
+        z-index: 10;
+        margin: 0 auto;
+      }
+      #box2 {
+        position: absolute;
+        background: rgb(204, 96, 204);
+        left: 100px;
+        top: 100px;
+        width: 50px;
+        height: 50px;
+      }
+      #go_top {
+        position: fixed;
+        border: 1px solid #333;
+        padding: 30px 20px;
+        right: 50px;
+        bottom: 50px;
+      }
+      .box a::after {
+        content: '|';
+        margin: 0 10px;
+      }
+      .box a:nth-child(4)::after {
+        content: '';
+        margin: 0;
+      }
+      .box a {
+        background: lightgray;
+      }
+      .page {
+        height: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>포지셔닝 기법</h1>
+    <p>태그의 위치를 웹브라우저 상에 표시하는 기법</p>
+    <h2>absolute, relative</h2>
+    <p>태그의 위치를 절대적인 위치로 지정한다.</p>
+    <p>top, right, bottom, left 속성을 사용할 수 있다.</p>
+    <div class="box" id="box1">
+      <a href="#page1">상세정보</a>
+      <a href="#page2">리뷰24,656</a>
+      <a href="#page3">Q&amp;A 867</a>
+      <a href="#page4">반품/교환정보</a>
+    </div>
+    <div class="page">
+      <h2 id="page1">상세정보</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+        obcaecati rerum consequuntur cum repudiandae perspiciatis quod nobis aut
+        soluta ut officiis qui molestias incidunt, nostrum amet! Qui, illo sint?
+        Dolore?
+      </p>
+    </div>
+    <div class="page">
+      <h2 id="page2">리뷰24,656</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis qui,
+        hic eum, ab cum numquam mollitia doloribus veniam non omnis, aspernatur
+        dolor nostrum esse! Iste amet voluptatibus aspernatur porro natus.
+      </p>
+    </div>
+    <div class="page">
+      <h2 id="page3">Q&amp;A 867</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, fuga
+        veritatis sint porro et, culpa error asperiores exercitationem id
+        necessitatibus aliquid cum sunt recusandae nihil. Voluptatum rem facilis
+        enim nemo.
+      </p>
+    </div>
+    <div class="page">
+      <h2 id="page4">반품/교환정보</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, fuga
+        veritatis sint porro et, culpa error asperiores exercitationem id
+        necessitatibus aliquid cum sunt recusandae nihil. Voluptatum rem facilis
+        enim nemo.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포지셔닝(positioning)</title>
+    <style>
+      .box {
+        position: absolute; /* 절대적인 위치 */
+        left: 0;
+        top: 0;
+        border: 1px solid black;
+        padding: 50px;
+        width: 200px;
+        height: 200px;
+      }
+      #box1 {
+        background: rgb(85, 85, 190);
+        z-index: 10;
+      }
+      #box2 {
+        background: rgb(204, 96, 204);
+        left: 50px;
+        top: 50px;
+      }
+      #box3 {
+        background: rgb(224, 224, 128);
+        left: 100px;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>포지셔닝 기법</h1>
+    <p>태그의 위치를 웹브라우저 상에 표시하는 기법</p>
+    <h2>absolute</h2>
+    <p>태그의 위치를 절대적인 위치로 지정한다.</p>
+    <p>top, right, bottom, left 속성을 사용할 수 있다.</p>
+    <div class="box" id="box1">box1입니다.</div>
+    <div class="box" id="box2">box2입니다.</div>
+    <div class="box" id="box3">box3입니다.</div>
+  </body>
+</html>
